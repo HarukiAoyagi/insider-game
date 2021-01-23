@@ -1,4 +1,4 @@
-  
+
 /**
  * このページへアクセスされたとき以下の挙動を行う
  *
@@ -6,11 +6,9 @@
  * 2. 手順1で取得した値をtextareaにセットする
  */
 // ページ読み込み完了後にonInitファンクションを実行
-window.onload = onInit()
-
-function onInit() {
+window.onload = function () {
     // ローカルストレージの値を取得
-    let playerName = localStorage.getItem(srageKey)
+    let playerName = localStorage.getItem(strageKey)
     // テキストエリアにローカルストレージの値を設定
     members.value = playerName
 }
@@ -24,9 +22,7 @@ function onInit() {
  * 3. share.htmlへ遷移する
  */
 // 次へボタンクリック後にonClickファンクションを実行
-document.getElementById("done").onclick = moveShare()
-
-function moveShare() {
+document.getElementById("done").onclick = function () {
     // キー生成
     const playedData = 'before'
 
