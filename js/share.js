@@ -22,7 +22,7 @@ let themaArray = ["自転車", "車", "カレンダー", "目覚まし時計", "
 let thema = themaArray[Math.floor(Math.random() * themaArray.length)];
 
 // ローカルストレージの値を取得
-let playerName = localStorage.getItem(srageKey)
+let playerName = localStorage.getItem(strageKey)
 
 // 改行区切りで配列を格納
 let 
