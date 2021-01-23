@@ -84,7 +84,7 @@ footer {
 
   .role {
     margin: 30px 0 30px 0;
-    max-width: 200px;
+    max-width: 300px;
   }
 
   .desc {
@@ -94,7 +94,7 @@ footer {
 
   .thema {
     opacity: 0;
-    font-size: 2.0em;
+    font-size: 3.0em;
     color: #080404;
     animation: fadein-bottom 1.0s ease-out 0.8s 1 forwards;
   }
