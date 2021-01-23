@@ -4,10 +4,10 @@ body {
     display: flex;
     flex-direction:column;
     align-items: center;
-    background: #e6001a;
+    background: #a20719;
 }
 
-img {
+.logo {
     max-width: 300px;
     margin: 50px;
 }
@@ -17,10 +17,10 @@ textarea {
     background: #080404;
     padding: 10px;
     font-size: 1.2em;
-    color: #e6001a;
+    color: #ddd;
     max-width: 500px;
     height: 500px;
-    border: #e6001a;
+    border: #a20719;
     outline: none;
 }
 
@@ -49,7 +49,7 @@ footer {
   }
   
   .button-diagonal:hover {
-    color: #e6001a;
+    color: #a20719;
   }
   
   .button-diagonal::before {
@@ -69,3 +69,47 @@ footer {
   .button-diagonal:hover::before {
     height: 400%;
   }
+
+  h1 {
+      margin: 30px;
+  }
+
+  .links {
+      max-width: 500px;
+      padding: 10px;
+      margin: 0 10px 0 10px;
+      border: solid 1px #080404;
+      border-radius: 10px;
+  }
+
+  .role {
+    margin: 30px 0 30px 0;
+    max-width: 200px;
+  }
+
+  .desc {
+    opacity: 0;
+    animation: fadein-bottom 1.0s ease-out 0.8s 1 forwards;
+  }
+
+  .thema {
+    opacity: 0;
+    font-size: 2.0em;
+    color: #080404;
+    animation: fadein-bottom 1.0s ease-out 0.8s 1 forwards;
+  }
+
+  .fade-in-bottom {
+    opacity: 0;
+    animation: fadein-bottom 1.0s ease-out 0.3s 1 forwards;
+ }
+ @keyframes fadein-bottom {
+    0% {
+       opacity: 0;
+       transform: translateY(20px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateY(0);
+    }
+ }
