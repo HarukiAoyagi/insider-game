@@ -11,7 +11,7 @@ window.onload = function () {
     // ローカルストレージの値を取得
     let playerName = localStorage.getItem(strageKey)
     // テキストエリアにローカルストレージの値を設定
-    members.value = playerName
+    document.getElementById("members").value = playerName
 
 
     document.getElementById('done').onclick = function () {
@@ -22,7 +22,7 @@ window.onload = function () {
         let beforeMember = members.getItem(strageKey)
     
         // テキストエリアの値をローカルストレージに格納
-        localStorage.setItem(playedData, beforeMember)
+        localStorage.setItem(strageKey, beforeMember)
     
         // ページ遷移
         window.location.href = 'share.html'
