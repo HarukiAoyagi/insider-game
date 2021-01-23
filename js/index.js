@@ -19,10 +19,10 @@ window.onload = function () {
         const playedData = 'before'
     
         // テキストエリアの値を取得
-        let beforeMember = members.getItem(strageKey)
+        let beforeMember = members.getItem(playerName)
     
         // テキストエリアの値をローカルストレージに格納
-        localStorage.setItem(strageKey, beforeMember)
+        localStorage.setItem(playerName, beforeMember)
     
         // ページ遷移
         window.location.href = 'share.html'
