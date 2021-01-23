@@ -13,6 +13,7 @@ window.onload = function () {
     // テキストエリアにローカルストレージの値を設定
     document.getElementById("members").value = playerName
 
+    console.log(playerName)
 
     document.getElementById('done').onclick = function () {
         // キー生成
