@@ -12,6 +12,21 @@ window.onload = function () {
     let playerName = localStorage.getItem(strageKey)
     // テキストエリアにローカルストレージの値を設定
     members.value = playerName
+
+
+    document.getElementById('done').onclick = function () {
+        // キー生成
+        const playedData = 'before'
+    
+        // テキストエリアの値を取得
+        let beforeMember = members.getItem(strageKey)
+    
+        // テキストエリアの値をローカルストレージに格納
+        localStorage.setItem(playedData, beforeMember)
+    
+        // ページ遷移
+        window.location.href = 'share.html'
+    }
 }
 
 
@@ -23,16 +38,3 @@ window.onload = function () {
  * 3. share.htmlへ遷移する
  */
 // 次へボタンクリック後にonClickファンクションを実行
-document.getElementById("done").onclick = function () {
-    // キー生成
-    const playedData = 'before'
-
-    // テキストエリアの値を取得
-    let beforeMember = members.getItem(strageKey)
-
-    // テキストエリアの値をローカルストレージに格納
-    localStorage.setItem(playedData, beforeMember)
-
-    // ページ遷移
-    window.location.href = 'share.html'
-}
