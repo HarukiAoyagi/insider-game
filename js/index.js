@@ -7,6 +7,7 @@
  */
 // ページ読み込み完了後にonInitファンクションを実行
 window.onload = function () {
+    let strageKey = "strage"
     // ローカルストレージの値を取得
     let playerName = localStorage.getItem(strageKey)
     // テキストエリアにローカルストレージの値を設定
