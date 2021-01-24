@@ -103,6 +103,11 @@ footer {
     animation: fadein-bottom 1.0s ease-out 0.8s 1 forwards;
   }
 
+  .gotop {
+    opacity: 0;
+    animation: fadein-bottom 1.0s ease-out 1.3s 1 forwards;
+  }
+
   .fade-in-bottom {
     opacity: 0;
     animation: fadein-bottom 1.0s ease-out 0.3s 1 forwards;
