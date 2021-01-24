@@ -12,7 +12,7 @@ const init = () => {
 
     memberList.forEach((v, i) => v.name = memberNameList[i]);
 
-    const message = memberList.map(v => `${v.name}\n${location.origin}/role.html?value=${encryptMessage(JSON.stringify(v))}\n\n`).join('').slice(0, -4);
+    const message = memberList.map(v => `${v.name}\n${location.origin}/role.html?value=${encryptMessage(JSON.stringify(v))}\n\n`).join('');
 
     document.getElementById('links').innerHTML = message.replace(/\n/g, '<br>');
 
