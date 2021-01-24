@@ -1,13 +1,28 @@
-/**
- * ページが開かれたとき以下の挙動を行う
- * 
- * 1. クエリストリングのvalueの値を取得する
- * 2. 手順1で取得した値を復号化する
- * 3. 画面に名前・役職（・お題）を表示させる
- */
-window.onload = onInit()
+const init = () => {
+    const value = window.location.search.slice(7);
 
-function onInit() {
-    let params = window.location.search
-    
+    let object;
+    try {
+        object = JSON.parse(decryptMessage(value));
+    } catch {
+        location.href = location.origin;
+    }
+
+    document.getElementById('thema').innerHTML = (object.role === 0 || object.role === 1) ? object.thema : '？';
+
+    if (object.role === 0) {
+        document.getElementById('insider').style.display = 'block';
+        return;
+    }
+
+    if (object.role === 1) {
+        document.getElementById('master').style.display = 'block';
+        return;
+    }
+
+    document.getElementById('commons').style.display = 'block';
 }
+
+const decryptMessage = (encryptedMessage) => CryptoJS.AES.decrypt(encryptedMessage, 'secretkey').toString(CryptoJS.enc.Utf8);
+
+window.onload = init;
